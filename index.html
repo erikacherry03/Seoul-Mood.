@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seoul Mood | Productos coreanos originales</title>
+  <meta name="description" content="Skincare, snacks, K-pop y papelería directamente desde Corea. Envíos a toda Colombia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <div class="topbar">🚚 Envíos a toda Colombia · Productos 100% originales 🇰🇷</div>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">Seoul<span>Mood</span> 🌸</a>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#productos">Productos</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#testimonios">Opiniones</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="cartOpen" aria-label="Abrir carrito">
+          🛒 <span class="badge" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner principal -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="pill">✨ Nuevo desde Seúl</span>
+          <h1>Lo mejor de Corea,<br>ahora en tu casa</h1>
+          <p>Skincare, snacks, K-pop y papelería lindísima. Elige tus favoritos y pide fácil por WhatsApp.</p>
+          <div class="hero__buttons">
+            <a href="#productos" class="btn btn--primary">Ver productos</a>
+            <a href="#categorias" class="btn btn--ghost">Explorar categorías</a>
+          </div>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="blob blob--1">🧴</div>
+          <div class="blob blob--2">🍜</div>
+          <div class="blob blob--3">💜</div>
+          <div class="blob blob--4">📓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section class="section" id="categorias">
+      <div class="container">
+        <h2 class="section__title">Compra por categoría</h2>
+        <p class="section__subtitle">Encuentra justo lo que buscas</p>
+        <div class="categories">
+          <button class="cat-card cat--pink" data-cat="skincare"><span>🧴</span><strong>Skincare</strong></button>
+          <button class="cat-card cat--yellow" data-cat="snacks"><span>🍜</span><strong>Snacks y Ramen</strong></button>
+          <button class="cat-card cat--lilac" data-cat="kpop"><span>💜</span><strong>K-pop</strong></button>
+          <button class="cat-card cat--mint" data-cat="papeleria"><span>📓</span><strong>Papelería</strong></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="section section--soft" id="productos">
+      <div class="container">
+        <h2 class="section__title">Nuestros productos</h2>
+        <p class="section__subtitle">Los favoritos de nuestras clientas</p>
+
+        <div class="toolbar">
+          <div class="filters" id="filters">
+            <button class="chip active" data-filter="todos">Todos</button>
+            <button class="chip" data-filter="skincare">Skincare</button>
+            <button class="chip" data-filter="snacks">Snacks y Ramen</button>
+            <button class="chip" data-filter="kpop">K-pop</button>
+            <button class="chip" data-filter="papeleria">Papelería</button>
+          </div>
+          <input type="search" id="search" class="search" placeholder="🔍 Buscar producto..." aria-label="Buscar producto">
+        </div>
+
+        <div class="grid" id="productGrid"></div>
+        <p class="empty" id="emptyMsg" hidden>No encontramos productos con esa búsqueda 😢</p>
+      </div>
+    </section>
+
+    <!-- Beneficios -->
+    <section class="section" id="beneficios">
+      <div class="container">
+        <h2 class="section__title">¿Por qué comprar con nosotros?</h2>
+        <div class="benefits">
+          <div class="benefit"><span>✅</span><h3>100% originales</h3><p>Importados directamente de marcas coreanas.</p></div>
+          <div class="benefit"><span>🚚</span><h3>Envíos a todo el país</h3><p>Recibe en la puerta de tu casa.</p></div>
+          <div class="benefit"><span>💬</span><h3>Atención por WhatsApp</h3><p>Te asesoramos antes y después de tu compra.</p></div>
+          <div class="benefit"><span>🎁</span><h3>Empaque especial</h3><p>Cada pedido llega listo para regalar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section section--soft" id="testimonios">
+      <div class="container">
+        <h2 class="section__title">Lo que dicen nuestras clientas</h2>
+        <div class="testimonials">
+          <blockquote><p>"El sérum llegó rapidísimo y mi piel está increíble. ¡Súper recomendado!"</p><cite>— Valentina R. ⭐⭐⭐⭐⭐</cite></blockquote>
+          <blockquote><p>"Los snacks estaban deliciosos y el empaque precioso. Ya hice mi segundo pedido."</p><cite>— Camila G. ⭐⭐⭐⭐⭐</cite></blockquote>
+          <blockquote><p>"Conseguí el photocard que buscaba hace meses. Atención muy amable."</p><cite>— Daniela M. ⭐⭐⭐⭐⭐</cite></blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#inicio" class="logo logo--light">Seoul<span>Mood</span> 🌸</a>
+        <p>Tu tienda de productos coreanos de confianza.</p>
+      </div>
+      <div>
+        <h4>Síguenos</h4>
+        <p><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a> · <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p>WhatsApp: <a id="footerWa" href="#" target="_blank" rel="noopener">+57 300 123 4567</a></p>
+      </div>
+    </div>
+    <p class="footer__copy">© <span id="year"></span> Seoul Mood. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Carrito lateral -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Carrito de compras">
+    <div class="cart__head">
+      <h3>Tu carrito 🛒</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart__items" id="cartItems"></div>
+    <div class="cart__foot">
+      <div class="cart__total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+      <button class="btn btn--whatsapp" id="checkoutBtn">Pedir por WhatsApp 💬</button>
+      <button class="link-btn" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">💬</a>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
